@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .slider-container {
+            position: relative;
+            width: 100%;
+            margin-top: 20px; 
+            overflow: hidden; 
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            flex: 0 0 auto;
+            width: 100%;
+            text-align: center; /* Center align the image */
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="top-buttons">
+            <div class="login-box">
+                <button class="login-btn">Login</button>
+            </div>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+        <img src="photos/logo.png" alt="Welcome" color="none">
+        <h1>WELCOME</h1>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html"><b>Home</b></a></li>
+                    <li><a href="gallery.html"><B>Gallery</B></a></li>
+                    <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+                    <li><a href="about us.html"><b>About us</b></a></li>
+                    <li><a href="contact.html"><b>Contact us</b></a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <div class="container">
+            <form>
+                <input type="text" placeholder="Search">
+                <button type="submit">Go</button>
+            </form>
+        </div>
+        
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="photos/mashle.jpeg" alt="img" width="800px">
+            </div>
+            <div class="slide">
+                <img src="photos/onepiece.jpg" alt="img2">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlider(-1)">Previous</button>
+        <button class="next" onclick="moveSlider(1)">Next</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function moveSlider(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) {slideIndex = 0}    
+            if (n < 0) {slideIndex = slides.length - 1}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex].style.display = "block";  
+        }
+    </script>
+    <footer class="footer">
+        <div >
+            <span class="text-muted">© 2024 Kushal Deshar,chapagau,lalitpur</span>
+        </div>
+    </footer>
+</body>
+</html>

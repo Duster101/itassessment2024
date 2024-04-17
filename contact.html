@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        .menu {text-align: center;}
+        ul {
+            padding: 0; 
+            list-style: none;
+            background: rgba(242, 242, 242, 0.5);
+        }
+        
+        ul li {display: inline-block;}
+        
+        ul li a {
+            display: block;
+            padding: 10px 25px;
+            color: #000;
+            text-decoration: none;
+            font-family: 'Exo 2', sans-serif;
+        }
+        
+        ul li a:hover {
+            color: #fff;
+            background: #232323;
+        }
+        body {
+            margin: 0;
+            font-family: 'Exo 2', sans-serif;
+            background-image: url('photos/console.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            width: 60%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="selection"],
+        input[type="submit"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        #result {
+            text-align: center;
+            color: white;
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body> 
+    <div class="menu">
+        <ul>
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="gallery.html"><B>Gallery</B></a></li>
+            <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+            <li><a href="about us.html"><b>About us</b></a></li>
+            <li><a href="contact.html"><b>Contact us</b></a></li>
+        </ul>
+    </div>
+    <h1>CONTACT US!</h1>
+    <div class="container">
+        <table>
+            <form action="index.html" method="post" onsubmit="return validate()">
+                <tr><td> <input type="text" name="username" id="user" placeholder="Name"></td></tr>
+                <tr><td> <input type="email" name="email" id="Mail" placeholder="E-mail"></td></tr>
+                <tr><td> <input type="number" name="number" id="number" placeholder="Number"></td></tr>
+                <tr><td> <input type="text" name="select" id="select" placeholder="Message"></td></tr>
+                <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
+            </form>
+        </table>
+    </div>
+    <footer class="footer">
+        <div >
+            <span class="text-muted">© 2024 Kushal Deshar,chapagau,lalitpur</span>
+        </div>
+    </footer>
+</body>
+</html>

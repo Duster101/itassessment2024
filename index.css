@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    background-image: url('photos/console.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    margin-top: -50px;
+    margin-left: -80px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    margin-top: -50px;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Exo 2', sans-serif;
+}
+.menu {text-align: center;}
+
+ul {
+    padding: 0; 
+    list-style: none;
+    background: rgba(242, 242, 242, 0.5);
+}
+
+ul li {display: inline-block;}
+
+ul li a {
+    display: block;
+    padding: 10px 25px;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+}
+
+ul li a:hover {
+    color: #fff;
+    background: #232323;
+}
+.container {
+    text-align: center;
+
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+
+}
+
+form {
+    background: #fff;
+    width: 1000px;
+    height: 55px;
+    display: flex;
+    align-items: center; 
+}
+
+form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 19px; 
+}
+
+form button {
+    position: absolute;
+    left: -9999px;
+    background: #957f83;
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+form input:focus + button {
+    position: initial;
+    left: auto;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.top-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999; 
+}
+
+.login-box {
+    display: inline-block;
+    border: 2px solid #000;
+    padding: px 10px; 
+    box-sizing: border-box; 
+}
+
+.login-btn,
+.signup-btn {
+    border: none;
+    color: #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+
+.login-btn {
+    background-color: transparent;
+}
+
+.signup-btn {
+    background-color: #000;
+    color: #957f83; 
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+    background-color: #f0f0f0;
+}
